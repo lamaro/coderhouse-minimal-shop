@@ -1,0 +1,22 @@
+header { background: #fff; padding: 24px 0 30px; }
+header .inner_header { display: grid; grid-template-columns: 160px auto; justify-content: space-between;padding: 0 80px; margin: auto; position: relative; }
+header #logo {  align-self: center; }
+
+header #right_nav { display: flex; align-items: center; }
+
+header #user_menu { margin-left: 30px; }
+header #user_menu ul { display: flex; justify-content: center; align-items: center; }
+header #user_menu ul li { margin-left: 25px; cursor: pointer; transition: all 0.2s;}
+header #user_menu ul li:hover { opacity: .5; transition: all 0.2s; }
+
+header nav > ul { display: flex; }
+header nav > ul > li { margin-left: 40px; }
+header nav > ul > li > a { display: block; font-size: 18px; font-weight: 700; text-transform: uppercase; transition: all 0.2s;}
+header nav > ul > li > a:hover { opacity: .5; transition: all 0.2s;}
+header nav > ul > li.current_page_item > a, 
+header nav > ul > li.current-menu-item > a { color: #9A8970; opacity: 1 !important; }
+
+header nav #menu  .sub-menu { width: 200px; display: none; background: #fff; position: absolute; top: 106px; left:0; text-align: left; box-shadow: 0 1px 3px rgba(0,0,0,0.2); border-top: 4px solid #8ad6cc; }
+header nav #menu  .sub-menu li a { padding: 14px; border-top: 1px solid #ddd; font-size: 15px; display: block; }
+header nav #menu  .sub-menu li a:hover { background: #eee; }
+header nav #menu  > ul > li:hover > .sub-menu { display: block; }
