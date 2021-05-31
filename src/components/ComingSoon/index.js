@@ -3,9 +3,9 @@ import './index.css'
 import Inner from '../../containers/Inner'
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
-const ProductCard = () => {
+const ProductCard = ({colNum}) => {
     return (
-        <div className="col_4 product_card">
+        <div className={`col_${colNum} product_card`}>
             <SkeletonTheme color="#202020" highlightColor="#444">
                 <div style={{ fontSize: 150 }}><Skeleton /></div>
                 <h2 style={{ fontSize: 40, lineHeight: 2 }}><Skeleton /></h2>
@@ -24,12 +24,15 @@ const ComingSoon = ({ title }) => {
                     <h1>{title}</h1>
                 </div>
                 <div className="grid">
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
+                    <ProductCard colNum={6} />
+                    <ProductCard colNum={6} />
+                    <ProductCard colNum={4} />
+                    <ProductCard colNum={4} />
+                    <ProductCard colNum={4} />
+                    <ProductCard colNum={3} />
+                    <ProductCard colNum={3} />
+                    <ProductCard colNum={3} />
+                    <ProductCard colNum={3} />
                 </div>
             </Inner>
         </div>
