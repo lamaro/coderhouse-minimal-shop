@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css'
+import './ItemListContainer.css'
 import Inner from '../../containers/Inner'
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
@@ -15,7 +15,7 @@ const ProductCard = ({colNum}) => {
     )
 }
 
-const ComingSoon = ({ title }) => {
+const ItemListContainer = ({ title }) => {
 
     return (
         <div id="coming">
@@ -39,4 +39,4 @@ const ComingSoon = ({ title }) => {
     )
 }
 
-export default ComingSoon
+export default ItemListContainer

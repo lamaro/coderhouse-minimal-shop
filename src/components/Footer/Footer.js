@@ -1,6 +1,6 @@
 import React from 'react';
 import Inner from '../../containers/Inner'
-import './index.css';
+import './Footer.css';
 
 const Footer = () => {
     return (
@@ -37,8 +37,8 @@ const Footer = () => {
                         <p>© 2021 Minimal Shop - <a href="/">Terms and conditions</a></p>
                         <div id="social_footer">
                             <span>Follow Us</span>
-                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/"><i className="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/"><i className="fab fa-facebook"></i></a>
                         </div>
                     </Inner>
                 </div>

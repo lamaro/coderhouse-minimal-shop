@@ -1,6 +1,6 @@
 header { background: #fff; padding: 24px 0 30px; }
 header .inner_header { display: grid; grid-template-columns: 160px auto; justify-content: space-between;padding: 0 80px; margin: auto; position: relative; }
-header #logo {  align-self: center; }
+header #logo {  align-self: center; width: 130px; }
 
 header #right_nav { display: flex; align-items: center; }
 
