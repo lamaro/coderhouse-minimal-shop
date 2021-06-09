@@ -1,46 +1,51 @@
-import React from 'react';
-import './ItemListContainer.css'
+import React, { useState, useEffect } from 'react';
 import Inner from '../../containers/Inner'
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-import ItemCount from '../ItemCount/ItemCount';
-
-const ProductCard = ({colNum}) => {
-
-    const onAdd = amount => {
-        console.log(`Productos agregados ${amount}`)
-    }
-
-    return (
-        <div className={`col_${colNum} product_card`}>
-            <SkeletonTheme color="#202020" highlightColor="#444">
-                <div style={{ fontSize: 150 }}><Skeleton /></div>
-                <h2 style={{ fontSize: 40, lineHeight: 2 }}><Skeleton /></h2>
-                <p style={{ fontSize: 20, lineHeight: 2 }}><Skeleton count={3} /></p>
-            </SkeletonTheme>
-            <ItemCount stock={10} initial={1} onAdd={onAdd} />
-        </div>
-    )
-}
+import styles from './ItemListContainer.module.css'
+import ItemList from '../ItemList/ItemList';
 
 const ItemListContainer = ({ title }) => {
 
+    const [products, setproducts] = useState([])
+
+    useEffect(() => {
+        const dummyProducts = [
+            { id: 1, title: 'Sable laser', price: 45.99, pictureUrl: '/' },
+            { id: 2, title: 'Dummy product', price: 60.99, pictureUrl: '/' },
+            { id: 3, title: 'Dummy product', price: 10.30, pictureUrl: '/' },
+            { id: 4, title: 'Dummy product', price: 100, pictureUrl: '/' },
+            { id: 5, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
+            { id: 6, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
+            { id: 7, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
+            { id: 8, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
+            { id: 9, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
+            { id: 10, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
+            { id: 11, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
+            { id: 12, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
+        ]
+
+        const getProducts = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                dummyProducts === [] ? resolve(dummyProducts) : reject('No products')
+            }, 2000);
+        })
+
+        getProducts
+            .then(data => {
+                setproducts(data)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+            .finally(() => console.log('request finalizado'))
+    }, [])
+
     return (
-        <div id="coming">
+        <div id={styles.item_list_container}>
             <Inner>
-                <div id="coming_header">
+                <div id={styles.item_list_container_header}>
                     <h1>{title}</h1>
                 </div>
-                <div className="grid">
-                    <ProductCard colNum={6} />
-                    <ProductCard colNum={6} />
-                    <ProductCard colNum={4} />
-                    <ProductCard colNum={4} />
-                    <ProductCard colNum={4} />
-                    <ProductCard colNum={3} />
-                    <ProductCard colNum={3} />
-                    <ProductCard colNum={3} />
-                    <ProductCard colNum={3} />
-                </div>
+                {products && <ItemList items={products} />}
             </Inner>
         </div>
     )

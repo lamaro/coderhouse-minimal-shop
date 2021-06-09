@@ -8,11 +8,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
     const addItems = () => {
         cont < stock && setCont(cont + 1)
-        console.log('items added')
+        console.log('item +')
     }
 
     const removeItems = () => {
         cont > 1 && setCont(cont - 1)
+        console.log('item -')
     }
 
     return (

@@ -17,4 +17,4 @@ const App = () => {
        </Wrapper>
     )
 }
-export default App; 
+export default App;
