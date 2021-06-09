@@ -2,8 +2,14 @@ import React from 'react';
 import './ItemListContainer.css'
 import Inner from '../../containers/Inner'
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import ItemCount from '../ItemCount/ItemCount';
 
 const ProductCard = ({colNum}) => {
+
+    const onAdd = amount => {
+        console.log(`Productos agregados ${amount}`)
+    }
+
     return (
         <div className={`col_${colNum} product_card`}>
             <SkeletonTheme color="#202020" highlightColor="#444">
@@ -11,6 +17,7 @@ const ProductCard = ({colNum}) => {
                 <h2 style={{ fontSize: 40, lineHeight: 2 }}><Skeleton /></h2>
                 <p style={{ fontSize: 20, lineHeight: 2 }}><Skeleton count={3} /></p>
             </SkeletonTheme>
+            <ItemCount stock={10} initial={1} onAdd={onAdd} />
         </div>
     )
 }

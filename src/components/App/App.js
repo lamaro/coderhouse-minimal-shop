@@ -5,10 +5,12 @@ import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import Footer from '../Footer/Footer'
 
 const App = () => {
-    const [ productsCount ] = useState(5); //TODO: add setProductsCount
+
+    const [productsInCart, setproductsInCart] = useState(1)
+    
     return(
        <Wrapper>
-            <NavBar productsCount={productsCount}/>
+            <NavBar productsCount={productsInCart}/>
             <ItemListContainer title={`Vienen cosas maravillosas`} />
             <Footer />
        </Wrapper>
