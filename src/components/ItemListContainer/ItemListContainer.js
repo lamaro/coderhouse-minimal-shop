@@ -25,7 +25,7 @@ const ItemListContainer = ({ title }) => {
 
         const getProducts = new Promise((resolve, reject) => {
             setTimeout(() => {
-                dummyProducts === [] ? resolve(dummyProducts) : reject('No products')
+                dummyProducts !== [] ? resolve(dummyProducts) : reject('No products')
             }, 2000);
         })
 
