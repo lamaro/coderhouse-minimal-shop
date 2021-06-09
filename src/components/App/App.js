@@ -6,7 +6,8 @@ import Footer from '../Footer/Footer'
 
 const App = () => {
 
-    const [productsInCart, setproductsInCart] = useState(1)
+    //const [productsInCart, setproductsInCart] = useState(1)
+    const [productsInCart] = useState(1)
     
     return(
        <Wrapper>
