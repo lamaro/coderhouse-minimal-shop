@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Wrapper from '../../containers/Wrapper'
 import NavBar from '../NavBar/NavBar'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 import Footer from '../Footer/Footer'
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
        <Wrapper>
             <NavBar productsCount={productsInCart}/>
             <ItemListContainer title={`Vienen cosas maravillosas`} />
+            <ItemDetailContainer />
             <Footer />
        </Wrapper>
     )

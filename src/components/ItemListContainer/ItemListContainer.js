@@ -3,25 +3,14 @@ import Inner from '../../containers/Inner'
 import styles from './ItemListContainer.module.css'
 import ItemList from '../ItemList/ItemList';
 
+//To be removed...
+import dummyProducts from '../../assets/dummy/products';
+
 const ItemListContainer = ({ title }) => {
 
-    const [products, setproducts] = useState([])
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
-        const dummyProducts = [
-            { id: 1, title: 'Sable laser', price: 45.99, pictureUrl: '/' },
-            { id: 2, title: 'Dummy product', price: 60.99, pictureUrl: '/' },
-            { id: 3, title: 'Dummy product', price: 10.30, pictureUrl: '/' },
-            { id: 4, title: 'Dummy product', price: 100, pictureUrl: '/' },
-            { id: 5, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
-            { id: 6, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
-            { id: 7, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
-            { id: 8, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
-            { id: 9, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
-            { id: 10, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
-            { id: 11, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
-            { id: 12, title: 'Dummy product', price: 45.99, pictureUrl: '/' },
-        ]
 
         const getProducts = new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -31,7 +20,7 @@ const ItemListContainer = ({ title }) => {
 
         getProducts
             .then(data => {
-                setproducts(data)
+                setProducts(data)
             })
             .catch((err) => {
                 console.log(err)
