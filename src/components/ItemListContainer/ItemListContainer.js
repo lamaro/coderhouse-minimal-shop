@@ -13,11 +13,14 @@ const ItemListContainer = ({ title }) => {
     const { catId } = useParams();
 
     const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
+        setLoading(true)
         getProductByCatId(catId)
             .then(data => {
                 setProducts(data)
+                setLoading(false)
             })
             .catch((err) => {
                 console.log(err)
@@ -30,7 +33,7 @@ const ItemListContainer = ({ title }) => {
                 <div id={styles.item_list_container_header}>
                     <h1>{title}</h1>
                 </div>
-                {products.length > 0 ? <ItemList items={products} /> : <Loading />}
+                {loading ? <Loading /> : <ItemList items={products} /> }
             </Inner>
         </div>
     )

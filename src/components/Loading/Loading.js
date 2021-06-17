@@ -4,7 +4,7 @@ import styles from './Loading.module.css'
 
 const Loading = () => {
     return (
-        <div id={styles}>
+        <div id={styles.loading_wrapper}>
             <Loader />
         </div>
     )
