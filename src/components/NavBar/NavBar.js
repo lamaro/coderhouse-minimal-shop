@@ -1,19 +1,23 @@
 import React from 'react';
 import styles from './NavBar.module.css';
 import CartWidget from '../CartWidget/CartWidget'
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = ({ productsCount }) => {
     
     return (
         <header>
             <div className={styles.inner_header}>
-                <img src={require('../../assets/logo.svg').default} alt="Minimal logo" id="logo" />
+                <Link to={`/`}><img src={require('../../assets/logo.svg').default} alt="Minimal logo" id="logo" /></Link>
                 <div id={styles.right_nav}>
                     <nav>
                         <ul>
-                            <li><a href="/">Shop</a></li>
-                            <li><a href="/">About us</a></li>
-                            <li><a href="/">Contact</a></li>
+                            <li><NavLink activeClassName={`selected`} to={`/category/1`}>Cat 1</NavLink></li>
+                            <li><NavLink activeClassName={`selected`} to={`/category/2`}>Cat 2</NavLink></li>
+                            <li><NavLink activeClassName={`selected`} to={`/item/1`}>Prod 1</NavLink></li>
+                            <li><NavLink activeClassName={`selected`} to={`/item/2`}>Prod 2</NavLink></li>
+                            <li><NavLink activeClassName={`selected`} to={`/about-us`}>About us</NavLink></li>
+                            <li><NavLink activeClassName={`selected`} to={`/contact`}>Contact</NavLink></li>
                         </ul>
                     </nav>
                     <div id={styles.user_menu}>

@@ -2,30 +2,26 @@ import React, { useState, useEffect } from 'react';
 import styles from './ItemDetailContainer.module.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import Inner from '../../containers/Inner'
+import { useParams } from 'react-router';
 
 //To be removed...
-import dummyProducts from '../../assets/dummy/products';
+import { getProductById } from '../../assets/dummy/products';
 
 const ItemDetailContainer = () => {
+
+    const { id } = useParams();
+
     const [product, setProduct] = useState({})
 
     useEffect(() => {
-        const dummyProduct = dummyProducts[0] //the first dummy product
-
-        const getProducts = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                dummyProduct ? resolve(dummyProduct) : reject('No product')
-            }, 2000);
-        })
-
-        getProducts
+        getProductById(id)
             .then(data => {
                 setProduct(data)
             })
             .catch((err) => {
                 console.log(err)
             })
-    }, [])
+    }, [id])
 
     return (
         <div id={styles.itemDetailContainer}>
