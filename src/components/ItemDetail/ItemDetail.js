@@ -22,7 +22,7 @@ const ItemDetail = ({ item }) => {
                     <div className="info_wrapper">
                         <h1>{title}</h1>
                         <p>{description}</p>
-                        <p className={styles.price}>{price}</p>
+                        <p className={styles.price}>Ξ{price}</p>
                         <ItemCount stock={10} initial={1} onAdd={onAdd} />
                     </div>
                 </div>

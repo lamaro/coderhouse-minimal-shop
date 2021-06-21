@@ -1,6 +1,81 @@
-# Getting Started with Create React App
+# Minimal Gadgets and NFTs store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto para el curso de React de Coderhouse (Jun-2021)
+Basado en los requerimientos incrementales de los entregables semanales.
+El proyecto se encuentra en desarrollo.
+
+## Concepto comercial
+Se desarrolla el prototipo de un proyecto comercial basado en una tienda de ecommerce dedicada a la venta de productos. Entre ellos se encuentran: gadgets, indumentaria, y demás productos del ambiente geek/nerd/gammer-retro/pixelart.
+
+En una segunda etapa, luego de finalizado el curso, se pretende expandir las posibilidades de la tienda para incluir productos NFT basados en la blockchain Etherium.
+
+## Work to do
+
+- Cambio de promesas por fetch o axios con async/await (pendiente de próximas clases de Firebase).
+- Creación de menú mobile y optimización de responsive.
+- Mejoras en estilos css
+- Permitir que un producto esté en más de una categoría.
+- Implementar userWidget
+
+
+## Components
+
+### App
+Wrapper principal de la aplicación con React Router
+
+### NavBar
+Header y navbar con categorías principales
+
+### ItemListContainer
+Contenedor de listado de productos para categorías
+
+### Item
+Item de producto para listado de categoria
+
+### ItemDetailContainer
+Contenedor de detalle de producto
+
+### ItemDetail
+Detalle de producto
+
+### Button
+Botón reutilizable en diferentes componentes
+
+### Footer
+Footer de la aplicación con links a páginas y categorías.
+
+### Loading
+Svg de loading para llamadas asincrónicas
+
+### NoProductsFound
+Componente mostrado cuando no hay productos en una categororía
+
+### CartWidget
+Icono de cart en el Navbar
+
+### ItemCount
+Contador de productos en el carrito
+
+### UserWidget
+Icono de usuario en el Navbar
+
+
+## Utils
+Utilizadas para hacer fetch de data en los contenedores. Luego serán reemplazadas por funciones de Firebase
+
+### getCategories
+Funciones (promesas) para devolver contenido dummy de categorias desde /assets/dummy/categories.js
+
+### getProducts
+Funciones (promesas) para devolver contenido dummy de productos desde /assets/dummy/products.js
+
+
+## Demo
+
+![Farmers Market Finder Demo](https://bailarincosmico.com.ar/lean/minimal-shop/demo/demo.gif)
+
+
+## Boring stuff...
 
 ## Available Scripts
 
@@ -26,45 +101,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

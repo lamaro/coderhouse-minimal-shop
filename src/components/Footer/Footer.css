@@ -3,7 +3,7 @@ footer h4 { color: #fff; margin-bottom: 30px; }
 footer li, 
 footer li a { color: #fff; font-size: 15px; }
 footer li { margin-bottom: 20px; }
-
+footer .selected { border-bottom: 1px solid;}
 footer ul { float: left; margin-right: 60px; }
 #menus_footer > .inner > .grid > div:first-child { border-right: 1px solid rgba(255,255,255,0.3); padding: 30px; display: grid; align-content: center; justify-content: center; margin-right: 50px; }
 #menus_footer > .inner > .grid > div:last-child { border-left: 1px solid rgba(255,255,255,0.3); padding-left: 50px; }

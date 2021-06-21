@@ -2,9 +2,7 @@ import React from 'react'
 
 const UserWidget = () => {
     return (
-        <div>
-            
-        </div>
+        <img src={require('../../assets/icons/icon_user.svg').default} alt="User" />
     )
 }
 

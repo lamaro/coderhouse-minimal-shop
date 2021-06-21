@@ -12,6 +12,7 @@ header #user_menu ul li:hover { opacity: .5; transition: all 0.2s; }
 header nav > ul { display: flex; }
 header nav > ul > li { margin-left: 40px; }
 header nav > ul > li > a { display: block; font-size: 18px; font-weight: 700; text-transform: uppercase; transition: all 0.2s;}
+header nav > ul > li > .selected { opacity: .50;} /* CONSULTAR PORQUE NO ANDA! */
 header nav > ul > li > a:hover { opacity: .5; transition: all 0.2s;}
 header nav > ul > li.current_page_item > a, 
 header nav > ul > li.current-menu-item > a { color: #9A8970; opacity: 1 !important; }

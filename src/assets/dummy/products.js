@@ -15,7 +15,7 @@ const dummyProducts = [
         price: 60.99,
         description: 'This is the product description',
         pictureUrl: placeholder,
-        catId: 1
+        catId: 4
     },
     {
         id: 3,
@@ -35,7 +35,7 @@ const dummyProducts = [
     },
     {
         id: 2,
-        title: 'Wokie blaster',
+        title: 'Wokie blaster renewed',
         price: 60.99,
         description: 'This is the product description',
         pictureUrl: placeholder,
@@ -43,35 +43,12 @@ const dummyProducts = [
     },
     {
         id: 3,
-        title: 'Imperial conquister',
+        title: 'Old Stormtrooper helmet',
         price: 10.30,
         description: 'This is the product description',
         pictureUrl: placeholder,
-        catId: 4
+        catId: 1
     }
 ]
 
-const getProductByCatId = catId => {
-    return new Promise((resolve, reject) => {
-        let dummyProductsCat = [];
-        if (catId) {
-            dummyProductsCat = dummyProducts.filter(product => product.catId === parseInt(catId))
-        } else {
-            dummyProductsCat = dummyProducts;
-        }
-        setTimeout(() => {
-            dummyProductsCat ? resolve(dummyProductsCat) : reject('No products')
-        }, 2000);
-    })
-}
-
-const getProductById = id => {
-    return new Promise((resolve, reject) => {
-        const dummyProduct = dummyProducts.find(product => product.id === parseInt(id))
-        setTimeout(() => {
-            dummyProduct ? resolve(dummyProduct) : reject('No product')
-        }, 2000);
-    })
-}
-
-export { getProductById, getProductByCatId };
+export default dummyProducts;

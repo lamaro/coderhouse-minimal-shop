@@ -1,2 +1,16 @@
-#item_list_container{min-height: 50vh;background-color: #fafafa; padding-bottom: 50px;}
-#item_list_container_header{min-height: 30vh;background-color: #fafafa;display: flex;justify-content: center;align-items: center;}
+#item_list_container {
+  min-height: 90vh;
+  background-color: #fafafa;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#item_list_container_header {
+  height: 200px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

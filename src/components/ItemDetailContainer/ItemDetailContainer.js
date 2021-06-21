@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styles from './ItemDetailContainer.module.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
-import Inner from '../../containers/Inner'
 import Loading from '../Loading/Loading';
 import { useParams } from 'react-router';
 
 //To be removed...
-import { getProductById } from '../../assets/dummy/products';
+import { getProductById } from '../../utils/getProducts';
 
 const ItemDetailContainer = () => {
 
@@ -29,9 +28,9 @@ const ItemDetailContainer = () => {
 
     return (
         <div id={styles.itemDetailContainer}>
-            <Inner>
-            {loading ? <Loading /> : <ItemDetail item={product} />}
-            </Inner>
+            <div className="inner">
+                {loading ? <Loading /> : <ItemDetail item={product} />}
+            </div>
         </div>
     )
 }
