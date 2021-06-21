@@ -4,10 +4,16 @@ Proyecto para el curso de React de Coderhouse (Jun-2021)
 Basado en los requerimientos incrementales de los entregables semanales.
 El proyecto se encuentra en desarrollo.
 
+
 ## Concepto comercial
 Se desarrolla el prototipo de un proyecto comercial basado en una tienda de ecommerce dedicada a la venta de productos. Entre ellos se encuentran: gadgets, indumentaria, y demás productos del ambiente geek/nerd/gammer-retro/pixelart.
 
 En una segunda etapa, luego de finalizado el curso, se pretende expandir las posibilidades de la tienda para incluir productos NFT basados en la blockchain Etherium.
+
+
+## Demo
+![Minimal demo](demo/demo.gif)
+
 
 ## Work to do
 
@@ -16,6 +22,7 @@ En una segunda etapa, luego de finalizado el curso, se pretende expandir las pos
 - Mejoras en estilos css
 - Permitir que un producto esté en más de una categoría.
 - Implementar userWidget
+- and much more...
 
 
 ## Components
@@ -70,14 +77,8 @@ Funciones (promesas) para devolver contenido dummy de categorias desde /assets/d
 Funciones (promesas) para devolver contenido dummy de productos desde /assets/dummy/products.js
 
 
-## Demo
 
-![Minimal demo](demo/demo.gif)
-
-
-## Boring stuff...
-
-## Available Scripts
+## Boring stuff... Available Scripts
 
 In the project directory, you can run:
 
@@ -101,3 +102,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+
+
+![Minimal demo](src/assets/dummy/one_up.png) To be continued ...
