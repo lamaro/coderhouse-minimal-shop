@@ -72,7 +72,7 @@ Funciones (promesas) para devolver contenido dummy de productos desde /assets/du
 
 ## Demo
 
-![Farmers Market Finder Demo](https://bailarincosmico.com.ar/lean/minimal-shop/demo/demo.gif)
+![Minimal demo](demo/demo.gif)
 
 
 ## Boring stuff...
