@@ -2,18 +2,22 @@ import React, { useState } from 'react'
 import styles from './ItemCount.module.css'
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-
-    const [cont, setCont] = useState(initial)
-
+    const [productsToCart, setProductsToCart] = useState(initial)
+   
 
     const addItems = () => {
-        cont < stock && setCont(cont + 1)
+        productsToCart < stock && setProductsToCart(productsToCart + 1)
         console.log('item +')
     }
 
     const removeItems = () => {
-        cont > 1 && setCont(cont - 1)
+        productsToCart > 1 && setProductsToCart(productsToCart - 1)
         console.log('item -')
+    }
+
+    const addProductsToCart = (cant) => {
+        setProductsToCart(cant)
+        onAdd(productsToCart)
     }
 
     return (
@@ -22,12 +26,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 <div onClick={removeItems} >
                     -
                 </div>
-                <p>{cont}</p>
+                <p>{productsToCart}</p>
                 <div onClick={addItems} >
                     +
                 </div>
             </div>
-            <button onClick={()=>onAdd(cont)}>Add to cart</button>
+            <button onClick={ () => addProductsToCart(productsToCart) }>Add to cart</button>
         </div>
     )
 }

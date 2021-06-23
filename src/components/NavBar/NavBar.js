@@ -34,9 +34,7 @@ const NavBar = ({ productsCount }) => {
                         <ul>
                             <li><img src={require('../../assets/icons/icon_search.svg').default} alt="Search" /></li>
                             <li>
-                                <a href="/cart">
-                                    <CartWidget productsCount={productsCount} />
-                                </a>
+                                <CartWidget productsCount={productsCount} />
                             </li>
                             <li><a href="/"><UserWidget /></a></li>
                         </ul>

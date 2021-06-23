@@ -4,6 +4,8 @@ import NavBar from '../NavBar/NavBar'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 import Footer from '../Footer/Footer'
+// import CartContainer from '../CartContainer/CartContainer';
+import Waldo from '../Waldo/Waldo'
 
 const App = () => {
     //const [productsInCart, setproductsInCart] = useState(1)
@@ -22,7 +24,12 @@ const App = () => {
                 <Route exact path={`/item/:id`}>
                     <ItemDetailContainer />
                 </Route>
+                <Route exact path={`/cart`}>
+                    {/* <CartContainer /> */}
+                    <Waldo />
+                </Route>
                 <Route exact path={`/about-us`}>
+                    <Waldo />
                 </Route>
                 <Route exact path={`/contact`}>
                 </Route>

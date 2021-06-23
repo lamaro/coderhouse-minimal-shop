@@ -1,17 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './ItemDetail.module.css'
 import ItemCount from '../ItemCount/ItemCount'
+import { Link } from 'react-router-dom'
 
 const ItemDetail = ({ item }) => {
+
+    const [totalItems, setTotalItems] = useState(0)
+    const [addedItems, setAddedItems] = useState(0)
+    const [showViewCart, setShowViewCart] = useState(false)
 
     const { title, pictureUrl, description, price } = item
 
     const onAdd = amount => {
-        console.log(`Productos agregados ${amount}`)
+        setTotalItems(totalItems + amount)
+        setAddedItems(amount)
+        setShowViewCart(true)
     }
 
     return (
         <section id={styles.product_details}>
+            {showViewCart &&
+                <div class="notice green">
+                    <p>{`${addedItems} x beautiful ${title} added to your cart`}</p>
+                    <Link to={`/cart`}><button>Go to cart</button></Link>
+                </div>
+            }
             <div className="grid">
                 <div className="col_6">
                     <div className="image_wrapper">

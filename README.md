@@ -1,8 +1,7 @@
 # Minimal Gadgets and NFTs store
 
 Proyecto para el curso de React de Coderhouse (Jun-2021)
-Basado en los requerimientos incrementales de los entregables semanales.
-El proyecto se encuentra en desarrollo.
+Basado en los requerimientos incrementales de los entregables semanales. El proyecto se encuentra en desarrollo.
 
 
 ## Concepto comercial
@@ -14,6 +13,9 @@ En una segunda etapa, luego de finalizado el curso, se pretende expandir las pos
 ## Demo
 ![Minimal demo](demo/demo.gif)
 
+## Deployed on Vercel
+https://minimal-shop.vercel.app/
+
 
 ## Work to do
 
@@ -21,7 +23,8 @@ En una segunda etapa, luego de finalizado el curso, se pretende expandir las pos
 - Creación de menú mobile y optimización de responsive.
 - Mejoras en estilos css
 - Permitir que un producto esté en más de una categoría.
-- Implementar userWidget
+- Implementar userWidget.
+- Cambiar ids por slugs para productos y categorias.
 - and much more...
 
 
@@ -105,4 +108,4 @@ Your app is ready to be deployed!
 
 
 
-![Minimal demo](src/assets/dummy/one_up.png) To be continued ...
+![Minimal demo](src/assets/dummy/images/one_up.png) To be continued ...
