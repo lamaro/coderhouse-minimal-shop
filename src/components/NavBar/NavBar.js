@@ -36,7 +36,7 @@ const NavBar = ({ productsCount }) => {
                             <li>
                                 <CartWidget productsCount={productsCount} />
                             </li>
-                            <li><a href="/"><UserWidget /></a></li>
+                            <li><UserWidget /></li>
                         </ul>
                     </div>
                 </div>

@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom'
 const NoProductsFound = () => {
     return (
         <div id={styles.npf_wrapper}>
-            <p>No products yet...</p>
             <Link to={`/`}>
                 <img src={oneUp} alt="1up" />
             </Link>
+            <p>No products yet...</p>
         </div>
     )
 }

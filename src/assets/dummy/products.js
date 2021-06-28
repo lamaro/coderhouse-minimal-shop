@@ -26,7 +26,7 @@ const dummyProducts = [
         catId: 2
     },
     {
-        id: 1,
+        id: 4,
         title: `Leia's shootgun`,
         price: 60,
         description: `She's a bitch, you know it Luke`,
@@ -34,7 +34,7 @@ const dummyProducts = [
         catId: 1
     },
     {
-        id: 2,
+        id: 5,
         title: 'Wokie blaster renewed',
         price: 60.99,
         description: 'This is the product description',
@@ -42,7 +42,7 @@ const dummyProducts = [
         catId: 3
     },
     {
-        id: 3,
+        id: 6,
         title: 'Old Stormtrooper helmet',
         price: 10.30,
         description: 'This is the product description',

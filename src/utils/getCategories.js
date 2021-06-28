@@ -4,7 +4,7 @@ const getCategories = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             dummyCategories.length > 0 ? resolve(dummyCategories) : reject('No product')
-        }, 1000);
+        }, 500);
     })
 }
 
@@ -18,7 +18,7 @@ const getCategoryById = id => {
         }
         setTimeout(() => {
             category ? resolve(category) : reject('Category not found')
-        }, 1000);
+        }, 500);
     })
 }
 
