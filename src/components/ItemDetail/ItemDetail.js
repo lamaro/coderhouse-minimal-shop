@@ -14,12 +14,6 @@ const ItemDetail = ({ item }) => {
 
     const { title, pictureUrl, description, price } = item
 
-    // const productsAdded = () => {
-    //     const allReadyAdded = isInCart(id)
-    //     return allReadyAdded ? allReadyAdded.quantity : 1
-
-    // }
-
     const onAdd = amount => {
         addToCart({item, quantity: amount })        
         setAddedItems(amount)

@@ -5,16 +5,13 @@ const CartContext = createContext();
 const CartProvider = ({ defaultValue = [], children }) => {
     const [cart, setCart] = useState(defaultValue)
 
-    const findInCart = id =>
-        cart.find(product => product.item.id === id);
-
     const isInCart = id =>
-        findInCart(id) || false;
+        cart.find(product => product.item.id === id) || false;
 
     const getTotalItemsInCart = () =>
         cart.length > 0 ? cart.reduce((total, item) => total + item.quantity, 0) : 0
 
-    const addToCart = productToAdd => {
+    const addToCart = productToAdd => { //to be improved...
         const alreadyExists = isInCart(productToAdd.item.id)
         if (!alreadyExists && productToAdd.item.id) {
             setCart([...cart, productToAdd]);
@@ -25,8 +22,17 @@ const CartProvider = ({ defaultValue = [], children }) => {
         }
     }
 
+    const updateQty = productToAdd =>
+        setCart(cart.map(product => product.item.id === productToAdd.item.id ? productToAdd : product));
+
+    const removeItem = id =>
+        setCart(cart.filter(productToRemove => productToRemove.item.id !== id))
+
+    const getCartTotal = () =>
+        cart.reduce((total, current) => total + current.item.price * current.quantity, 0)
+
     return (
-        <CartContext.Provider value={{ cart, isInCart, addToCart, getTotalItemsInCart }}>
+        <CartContext.Provider value={{ cart, isInCart, addToCart, getTotalItemsInCart, updateQty, getCartTotal, removeItem }}>
             {children}
         </CartContext.Provider>
     )

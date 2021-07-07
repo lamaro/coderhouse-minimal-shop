@@ -30,16 +30,16 @@ const App = () => {
                         <CartContainer />
                     </Route>
                     <Route exact path={`/about-us`}>
-                        <Waldo />
+                        <Waldo message={`Come back soon, or maybe...`} />
                     </Route>
                     <Route exact path={`/account`}>
-                        <Waldo />
+                        <Waldo message={`Come back soon, or maybe...`} />
                     </Route>
                     <Route exact path={`/contact`}>
-                        <Waldo />
+                        <Waldo message={`Come back soon, or maybe...`} />
                     </Route>
                     <Route path="*">
-                        <Waldo />
+                        <Waldo message={`Page not found...`} />
                     </Route>
                 </Switch>
                 <Footer />
