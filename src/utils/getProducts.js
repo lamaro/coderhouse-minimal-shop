@@ -10,7 +10,7 @@ const getProductByCatId = catId => {
         }
         setTimeout(() => {
             dummyProductsCat.length > 0 ? resolve(dummyProductsCat) : reject('No products')
-        }, 500);
+        }, 100);
     })
 }
 
@@ -19,7 +19,7 @@ const getProductById = id => {
         const dummyProduct = dummyProducts.find(product => product.id === parseInt(id))
         setTimeout(() => {
             dummyProduct ? resolve(dummyProduct) : reject('No product')
-        }, 500);
+        }, 100);
     })
 }
 

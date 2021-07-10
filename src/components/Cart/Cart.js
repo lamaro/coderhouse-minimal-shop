@@ -9,7 +9,7 @@ const CartRow = ({ product, onEdit, onDelete }) => {
         <div key={product.item.id} className={styles.cart_product_row}>
             <span><Link to={`/item/${product.item.id}`}>{product.item.title}</Link></span>
             <span>{product.item.price}</span>
-            <span>{product.quantity}</span>
+            <span>{product.quantity} (Ξ{(product.item.price * product.quantity).toFixed(2)})</span>
             <div className={styles.actions}>
                 <CartItemCount item={product.item} stock={10} initial={product.quantity} onEdit={onEdit} onDelete={onDelete} />
 
