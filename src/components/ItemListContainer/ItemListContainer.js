@@ -4,10 +4,7 @@ import ItemList from '../ItemList/ItemList';
 import Loading from '../Loading/Loading';
 import NoProductsFound from '../NoProductsFound/NoProductsFound'
 import { useParams } from 'react-router';
-
-//Dummy promises until Firebase gets connected...
-import { getProductByCatId } from '../../utils/getProducts';
-import { getCategoryById } from '../../utils/getCategories';
+import { getFirestore } from '../../utils/firebase'
 
 const ItemListContainer = () => {
 
@@ -17,27 +14,42 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        setLoading(true)
-        getProductByCatId(catId)
-            .then(data => {
-                setProducts(data)
-            })
-            .catch((err) => {
-                console.log(err)
-                setProducts([])
-            })
-            .finally(() => setLoading(false))
-    }, [catId])
+        const fetchData = async () => {
 
-    useEffect(() => {
-        getCategoryById(catId)
-            .then(data => {
-                setCatInfo(data)
-            })
-            .catch((err) => {
-                console.log(err)
-                setCatInfo({})
-            })
+            setLoading(true);
+
+            try {
+                const db = getFirestore();
+
+                const categoriesCollection = db.collection(`categories`);
+                const catSnapshot = await categoriesCollection.doc(catId).get();
+
+                const itemsCollection = db.collection(`items`);
+                const itemSnapshot = catId ?
+                    await itemsCollection.where('categoryId', '==', catId).limit(20).get()
+                    :
+                    await itemsCollection.limit(20).get();
+
+                const items = itemSnapshot.docs.map(doc => {
+                    return { id: doc.id, ...doc.data() };
+                })
+
+                setCatInfo(catSnapshot.exists ?
+                    { id: catSnapshot.id, ...catSnapshot.data() }
+                    :
+                    { name: "Welcome to the machine", description: "Minimal selection of gadgets and NFTs" })
+
+                setProducts(items);
+
+            } catch (error) {
+                console.log(error);
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        fetchData();
+
     }, [catId])
 
     return (

@@ -7,7 +7,7 @@ const dummyProducts = [
         price: 45.99,
         description: 'This is the product description',
         pictureUrl: placeholder,
-        catId: 1
+        catId: '6Pi9a4bFEHLeiSgLHjZa'
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const dummyProducts = [
         price: 60.99,
         description: 'This is the product description',
         pictureUrl: placeholder,
-        catId: 4
+        catId: '6Pi9a4bFEHLeiSgLHjZa'
     },
     {
         id: 3,
@@ -23,7 +23,7 @@ const dummyProducts = [
         price: 10.30,
         description: 'This is the product description',
         pictureUrl: placeholder,
-        catId: 2
+        catId: '6Pi9a4bFEHLeiSgLHjZa'
     },
     {
         id: 4,

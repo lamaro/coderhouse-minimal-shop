@@ -1,25 +1,30 @@
-import dummyCategories from '../assets/dummy/categories'
+import { getFirestore } from '../utils/firebase/index'
 
 const getCategories = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            dummyCategories.length > 0 ? resolve(dummyCategories) : reject('No product')
-        }, 100);
-    })
+    const db = getFirestore();
+    const categoriesCollection = db.collection(`categories`);
+    return categoriesCollection.get()
+        .then(querySnapshot => querySnapshot.docs.map(
+            doc => {
+                return { id: doc.id, ...doc.data() }
+            }
+        )
+        )
 }
 
 const getCategoryById = id => {
-    return new Promise((resolve, reject) => {
-        let category = {};
-        if (id) {
-            category = dummyCategories.find(category => category.id === parseInt(id))
-        } else {
-            category = {name:"Welcome to the machine", description: "Minimal selection of gadgets and NFTs"}
+
+    const db = getFirestore();
+    const categoriesCollection = db.collection(`categories`);
+    const category = categoriesCollection.doc(id)
+    return category.get()
+        .then(doc => {
+            if (!doc.exists) {
+                return { name: "Welcome to the machine", description: "Minimal selection of gadgets and NFTs" }
+            }
+            return { id: doc.id, ...doc.data() }
         }
-        setTimeout(() => {
-            category ? resolve(category) : reject('Category not found')
-        }, 100);
-    })
+        )
 }
 
 export { getCategories, getCategoryById };
