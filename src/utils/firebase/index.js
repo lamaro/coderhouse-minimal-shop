@@ -18,4 +18,6 @@ const getFirebase = () => app;
 
 const getFirestore = () => firebase.firestore();
 
-export { getFirebase, getFirestore };
+const getDate = () => firebase.firestore.Timestamp.fromDate(new Date())
+
+export { getFirebase, getFirestore, getDate };

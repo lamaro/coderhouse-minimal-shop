@@ -6,7 +6,7 @@ import styles from './CartWidget.module.css'
 
 import { CartContext } from '../../contexts/CartContext';
 
-const CartWidget = ({ productsCount = 0 }) => {
+const CartWidget = () => {
 
     const cartContext = useContext(CartContext);
     const { getTotalItemsInCart } = cartContext;

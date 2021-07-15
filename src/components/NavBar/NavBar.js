@@ -5,7 +5,7 @@ import UserWidget from '../UserWidget/UserWidget'
 import { Link, NavLink } from 'react-router-dom';
 import { getCategories } from '../../utils/getCategories';
 
-const NavBar = ({ productsCount }) => {
+const NavBar = () => {
 
     const [categories, setCategories] = useState([])
 
@@ -32,9 +32,9 @@ const NavBar = ({ productsCount }) => {
                     </nav>
                     <div id={styles.user_menu}>
                         <ul>
-                            <li><img src={require('../../assets/icons/icon_search.svg').default} alt="Search" /></li>
+                            {/* <li><img src={require('../../assets/icons/icon_search.svg').default} alt="Search" /></li> */}
                             <li>
-                                <CartWidget productsCount={productsCount} />
+                                <CartWidget />
                             </li>
                             <li><UserWidget /></li>
                         </ul>

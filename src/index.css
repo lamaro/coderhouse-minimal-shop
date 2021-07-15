@@ -14,9 +14,9 @@ img { max-width:100%; -webkit-backface-visibility:hidden; backface-visibility:hi
 
 h1, 
 h2,
-h3 { font-weight: normal; }
-h1 { font-size: 24px; font-weight: 700; }
-h2 { font-size: 16px; }
+h3 { font-weight: normal;font-weight: 700; }
+h1 { font-size: 30px; }
+h2 { font-size: 20px; margin-bottom: 20px; }
 
 .inner{max-width: 1200px; margin: 0 auto;}
 
@@ -35,3 +35,10 @@ h2 { font-size: 16px; }
 .notice p {margin: 0;}
 
 .selected {opacity: .6!important;}
+
+input,
+select, 
+textarea { font-weight: normal; font-style: normal; min-height: 40px; line-height: 34px; border:1px solid #ddd; background: #fff; padding-left: 12px; -webkit-appearance: none; -moz-appearance: none; appearance: none; font-size: 14px; width: 100%; margin-top: 15px; }
+input[type='submit'] { cursor: pointer; padding: 0 !important;  font-family: 'Roboto Condensed', sans-serif;}
+label { font-size: 16px; }
+form span {color: red; font-size: 14px;}

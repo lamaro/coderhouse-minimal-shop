@@ -8,9 +8,9 @@ const CartContainer = () => {
     const { cart, updateQty, getCartTotal, removeItem } = cartContext;
 
     return (
-        <div className="inner">
+        <>
             {cart.length > 0 ? <Cart cart={cart} updateQty={updateQty} getCartTotal={getCartTotal} removeItem={removeItem} /> : <Waldo message={`No products yet...`} linkHome={true} />}
-        </div>
+        </>
     )
 }
 export default CartContainer

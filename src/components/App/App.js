@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import { CartProvider } from '../../contexts/CartContext';
@@ -6,16 +6,16 @@ import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 import Footer from '../Footer/Footer';
 import CartContainer from '../CartContainer/CartContainer';
+import CheckoutContainer from '../CheckoutContainer/CheckoutContainer';
 import Waldo from '../Waldo/Waldo';
 
 const App = () => {
-    //const [productsInCart, setproductsInCart] = useState(1)
-    const [productsInCart] = useState(1)
+
 
     return (
         <BrowserRouter>
             <CartProvider>
-                <NavBar productsCount={productsInCart} />
+                <NavBar />
                 <Switch>
                     <Route exact path={`/`}>
                         <ItemListContainer />
@@ -29,11 +29,14 @@ const App = () => {
                     <Route exact path={`/cart`}>
                         <CartContainer />
                     </Route>
+                    <Route exact path={`/checkout`}>
+                        <CheckoutContainer />
+                    </Route>
                     <Route exact path={`/about-us`}>
                         <Waldo message={`Come back soon, or maybe...`} />
                     </Route>
                     <Route exact path={`/account`}>
-                        <Waldo message={`Come back soon, or maybe...`} />
+                        <Waldo message={`No user implementation yet...`} />
                     </Route>
                     <Route exact path={`/contact`}>
                         <Waldo message={`Come back soon, or maybe...`} />

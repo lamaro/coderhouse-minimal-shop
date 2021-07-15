@@ -1,0 +1,5 @@
+.form_wrapper{padding: 0 30px; margin:0 auto;}
+.form_wrapper button {margin:50px auto;}
+
+.resume_wrapper li{ padding: 20px 0; border-bottom: 1px solid #000; display: flex; justify-content: space-between;}
+.resume_wrapper p{ display: flex; justify-content: flex-end; font-weight: 700; margin-top: 30px; font-size: 20px;}
