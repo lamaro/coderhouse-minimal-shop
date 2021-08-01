@@ -17,15 +17,10 @@ En una segunda etapa, luego de finalizado el curso, se pretende expandir las pos
 https://minimal-shop.vercel.app/
 
 
-## Work to do
+## Future improvments
 
-- Cambio de promesas por fetch o axios con async/await (pendiente de próximas clases de Firebase).
-- Creación de menú mobile y optimización de responsive.
-- Mejoras en estilos css
-- Permitir que un producto esté en más de una categoría.
-- Implementar userWidget.
-- Cambiar ids por slugs para productos y categorias.
-- and much more...
+
+
 
 
 ## Components
@@ -74,10 +69,7 @@ Icono de usuario en el Navbar
 Utilizadas para hacer fetch de data en los contenedores. Luego serán reemplazadas por funciones de Firebase
 
 ### getCategories
-Funciones (promesas) para devolver contenido dummy de categorias desde /assets/dummy/categories.js
-
-### getProducts
-Funciones (promesas) para devolver contenido dummy de productos desde /assets/dummy/products.js
+Funciones reutilizable para obtener las categorias desde Firebase, utilizado en navbar y footer
 
 
 

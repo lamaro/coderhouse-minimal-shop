@@ -32,7 +32,13 @@ const App = () => {
                         <CheckoutContainer />
                     </Route>
                     <Route exact path={`/about-us`}>
-                        <Waldo message={`Come back soon, or maybe...`} />
+                        <Waldo message={`Developed by Leandro Amaro García @ CoderHouse 2021`} />
+                    </Route>
+                    <Route exact path={`/shipping`}>
+                        <Waldo message={`Maybe some where in the future`} />
+                    </Route>
+                    <Route exact path={`/contact`}>
+                        <Waldo message={`Contact me: leanamaro@gmail.com`} />
                     </Route>
                     <Route path="*">
                         <Waldo message={`Page not found...`} />
