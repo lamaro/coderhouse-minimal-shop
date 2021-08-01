@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './NavBar.module.css';
 import CartWidget from '../CartWidget/CartWidget'
-import UserWidget from '../UserWidget/UserWidget'
 import { Link, NavLink } from 'react-router-dom';
 import { getCategories } from '../../utils/getCategories';
 
@@ -14,7 +13,6 @@ const NavBar = () => {
             .then((data) => {
                 setCategories(data)
             })
-
     }, [])
 
     return (
@@ -32,11 +30,9 @@ const NavBar = () => {
                     </nav>
                     <div id={styles.user_menu}>
                         <ul>
-                            {/* <li><img src={require('../../assets/icons/icon_search.svg').default} alt="Search" /></li> */}
                             <li>
                                 <CartWidget />
                             </li>
-                            <li><UserWidget /></li>
                         </ul>
                     </div>
                 </div>

@@ -28,7 +28,7 @@ const ItemListContainer = () => {
                 const itemSnapshot = catId ?
                     await itemsCollection.where('categoryId', '==', catId).limit(20).get()
                     :
-                    await itemsCollection.limit(20).get();
+                    await itemsCollection.orderBy('price', 'desc').limit(20).get();
 
                 const items = itemSnapshot.docs.map(doc => {
                     return { id: doc.id, ...doc.data() };

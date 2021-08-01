@@ -3,3 +3,9 @@
 
 .resume_wrapper li{ padding: 20px 0; border-bottom: 1px solid #000; display: flex; justify-content: space-between;}
 .resume_wrapper p{ display: flex; justify-content: flex-end; font-weight: 700; margin-top: 30px; font-size: 20px;}
+
+.actions {display: flex; justify-content: space-between; align-items: center; margin: 50px 0; border-top:1px solid #000; padding-top:20px;}
+.actions button{margin-left: 30px; background-color: red;}
+.actions button:first-child{margin-left: 0;}
+.actions span{font-size: 15px;}
+.actions span i{font-size: 20px;padding-right: 5px;}

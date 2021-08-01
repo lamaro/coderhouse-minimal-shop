@@ -11,7 +11,6 @@ import Waldo from '../Waldo/Waldo';
 
 const App = () => {
 
-
     return (
         <BrowserRouter>
             <CartProvider>
@@ -33,12 +32,6 @@ const App = () => {
                         <CheckoutContainer />
                     </Route>
                     <Route exact path={`/about-us`}>
-                        <Waldo message={`Come back soon, or maybe...`} />
-                    </Route>
-                    <Route exact path={`/account`}>
-                        <Waldo message={`No user implementation yet...`} />
-                    </Route>
-                    <Route exact path={`/contact`}>
                         <Waldo message={`Come back soon, or maybe...`} />
                     </Route>
                     <Route path="*">

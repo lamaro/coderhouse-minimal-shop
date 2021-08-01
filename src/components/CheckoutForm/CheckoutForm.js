@@ -1,48 +1,45 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-const CheckoutForm = ({handleSubmit}) => (
+const CheckoutForm = ({ handleSubmit }) => (
     <div>
         <Formik
             initialValues={{ email: '', name: '', phone: '' }}
             validate={values => {
                 const errors = {};
                 if (!values.name) {
-                    errors.name = 'Name Required';
+                    errors.name = 'Please enter your name';
                 }
                 if (!values.phone) {
-                    errors.phone = 'Phone Required';
+                    errors.phone = 'Please tell us your phone';
                 }
                 if (!values.email) {
-                    errors.email = 'Email Required';
+                    errors.email = 'We need to know your mail';
                 } else if (
                     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
                 ) {
-                    errors.email = 'Invalid email address';
+                    errors.email = 'mmm... this mail is not valid';
                 }
                 return errors;
             }}
             onSubmit={(values, { setSubmitting }) => {
                 setTimeout(() => {
                     handleSubmit(values)
-                    //handleSubmit(JSON.stringify(values, null, 2))
                     setSubmitting(false);
                 }, 200);
             }}
         >
             {({ isSubmitting }) => (
-                <Form>
+                <Form id='my-form'>
                     <Field placeholder="Name" type="text" name="name" />
                     <ErrorMessage name="name" component="span" />
                     <Field placeholder="Email" type="email" name="email" />
                     <ErrorMessage name="email" component="span" />
                     <Field placeholder="Phone" type="text" name="phone" />
                     <ErrorMessage name="phone" component="span" />
-                    {/* <Field type="password" name="password" />
-                    <ErrorMessage name="password" component="span" /> */}
-                    <button type="submit" disabled={isSubmitting}>
+                    {/* <button type="submit" disabled={isSubmitting}>
                         Place Order
-                    </button>
+                    </button> */}
                 </Form>
             )}
         </Formik>

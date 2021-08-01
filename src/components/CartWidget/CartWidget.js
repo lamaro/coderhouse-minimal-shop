@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom'
 
 import styles from './CartWidget.module.css'
@@ -19,13 +18,6 @@ const CartWidget = () => {
             </div>
         </NavLink>
     )
-}
-
-CartWidget.defaultProps = {
-    productsCount: 0
-}
-CartWidget.propTypes = {
-    productsCount: PropTypes.number.isRequired
 }
 
 export default CartWidget

@@ -1,11 +1,11 @@
 import React from 'react'
-// import Button from '../Button/Button'
 import styles from './Checkout.module.css'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import SectionHeader from '../SectionHeader/SectionHeader'
 import CheckoutForm from '../CheckoutForm/CheckoutForm'
 
 const Checkout = ({ cart, getCartTotal, placeOrder }) => {
+
     return (
         <>
             <SectionHeader title={`Checkout`} description={`Last step`} />
@@ -26,12 +26,15 @@ const Checkout = ({ cart, getCartTotal, placeOrder }) => {
                         </ul>
                         <div className="totals">
                             <p>Total: Ξ{getCartTotal().toFixed(2)}</p>
-                        </div>  
+                        </div>
                     </aside>
                 </div>
-                {/* <div className="actions">
-                    <Link to={`/cart`}><Button>Return to cart</Button></Link>
-                </div> */}
+                <div className={styles.actions}>
+                    <Link to={`/cart`}>
+                        <span><i className="far fa-hand-point-left"></i>Back to cart</span>
+                    </Link>
+                    <button form='my-form'>Place order</button>
+                </div>
             </div>
         </>
     )

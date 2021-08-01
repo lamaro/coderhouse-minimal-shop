@@ -12,6 +12,7 @@ const getCategories = () => {
         )
 }
 
+
 const getCategoryById = id => {
 
     const db = getFirestore();
