@@ -24,8 +24,8 @@ const ItemDetailContainer = () => {
                 if (!itemSnapshot.exists) {
                     console.log('No matching documents.');
                     return;
-                  }
-                
+                }
+
                 setProduct({ id: itemSnapshot.id, ...itemSnapshot.data() })
             } catch (error) {
                 console.log(error)
@@ -41,7 +41,7 @@ const ItemDetailContainer = () => {
     return (
         <div id={styles.itemDetailContainer}>
             <div className="inner">
-                {loading ? <Loading /> : product.id ? <ItemDetail item={product} /> : <Waldo message={`Product not found...`}/>}
+                {loading ? <Loading /> : product.id ? <ItemDetail item={product} /> : <Waldo message={`Product not found...`} />}
             </div>
         </div>
     )

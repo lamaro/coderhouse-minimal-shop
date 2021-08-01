@@ -37,9 +37,6 @@ const CheckoutForm = ({ handleSubmit }) => (
                     <ErrorMessage name="email" component="span" />
                     <Field placeholder="Phone" type="text" name="phone" />
                     <ErrorMessage name="phone" component="span" />
-                    {/* <button type="submit" disabled={isSubmitting}>
-                        Place Order
-                    </button> */}
                 </Form>
             )}
         </Formik>

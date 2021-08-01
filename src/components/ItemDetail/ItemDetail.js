@@ -15,7 +15,7 @@ const ItemDetail = ({ item }) => {
     const { title, pictureUrl, description, price } = item
 
     const onAdd = amount => {
-        addToCart({item, quantity: amount })        
+        addToCart({ item, quantity: amount })
         setAddedItems(amount)
         setShowNotice(true)
     }

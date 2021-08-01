@@ -3,7 +3,7 @@ import styles from './ItemCount.module.css'
 
 const ItemCount = ({ stock, initial, onAdd }) => {
     const [productsToCart, setProductsToCart] = useState(initial)
-   
+
 
     const addItems = () => {
         productsToCart < stock && setProductsToCart(productsToCart + 1)
@@ -31,7 +31,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                     +
                 </div>
             </div>
-            <button onClick={ () => addProductsToCart(productsToCart) }>Add to cart</button>
+            <button onClick={() => addProductsToCart(productsToCart)}>Add to cart</button>
         </div>
     )
 }
