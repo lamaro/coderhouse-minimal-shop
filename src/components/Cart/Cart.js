@@ -41,7 +41,7 @@ const Cart = ({ updateQty, cart, getCartTotal, removeItem }) => {
                     }
                 </div>
                 <div className={styles.cart_totals}>
-                    <p><strong>Total:</strong> Ξ{getCartTotal().toFixed(2)}</p>
+                    <p><strong>Total:</strong> Ξ{getCartTotal()}</p>
                     <Link to={`/checkout`}>
                         <Button>Go to checkout</Button>
                     </Link>

@@ -11,7 +11,7 @@ const CartProvider = ({ defaultValue = [], children }) => {
     const getTotalItemsInCart = () =>
         cart.length > 0 ? cart.reduce((total, item) => total + item.quantity, 0) : 0
 
-    const addToCart = productToAdd => { //to be improved...
+    const addToCart = productToAdd => {
         const alreadyExists = isInCart(productToAdd.item.id)
         if (!alreadyExists && productToAdd.item.id) {
             setCart([...cart, productToAdd]);
@@ -29,7 +29,7 @@ const CartProvider = ({ defaultValue = [], children }) => {
         setCart(cart.filter(productToRemove => productToRemove.item.id !== id))
 
     const getCartTotal = () =>
-        cart.reduce((total, current) => total + current.item.price * current.quantity, 0)
+        cart.reduce((total, current) => total + current.item.price * current.quantity, 0).toFixed(2)
 
     return (
         <CartContext.Provider value={{ cart, setCart, isInCart, addToCart, getTotalItemsInCart, updateQty, getCartTotal, removeItem }}>

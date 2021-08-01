@@ -1,1 +1,10 @@
-.product_card{border: 1px solid #999;padding: 20px 20px; border-radius: 5px; }
+.product_card{border: 1px solid #999;padding: 20px 20px; border-radius: 5px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.thumbnail {min-height: 300px; margin-bottom: 20px;}
+.title {font-size: 30px; min-height: 60px;}
+.description {font-size: 20px;min-height: 65px; margin-bottom: 5px;}
+.price {font-size: 22px; font-weight: 700;}
+
+@media screen and (max-width: 1240px) { 
+    .thumbnail {min-height: 100%;}
+    
+}

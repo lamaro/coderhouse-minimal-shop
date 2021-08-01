@@ -30,12 +30,12 @@ const ItemDetail = ({ item }) => {
             }
             <div className="grid">
                 <div className="col_6">
-                    <div className="image_wrapper">
+                    <div className={styles.image_wrapper}>
                         <img src={pictureUrl} alt={title} />
                     </div>
                 </div>
                 <div className="col_6">
-                    <div className="info_wrapper">
+                    <div className={styles.info_wrapper}>
                         <h1>{title}</h1>
                         <p>{description}</p>
                         <p className={styles.price}>Ξ{price}</p>
@@ -43,6 +43,7 @@ const ItemDetail = ({ item }) => {
                     </div>
                 </div>
             </div>
+
         </section>
     )
 }

@@ -28,3 +28,21 @@
 .actions {display: flex;justify-content: center; align-items: center;}
 .actions i {font-size:18px; cursor: pointer;margin-left:60px;}
 
+
+@media screen and (max-width: 1240px) { 
+    .cart_product_row{flex-direction: column; align-items: center; text-align: center;}
+    .cart_product_row span {padding: 10px 0;}
+    .cart_product_row .actions {margin-top: 20px;}
+    .actions i {font-size:30px;margin-left:80px;}
+    
+}
+
+@media screen and (max-width: 768px) { 
+    .actions i {font-size:30px;margin-left:100px;}
+    
+}
+
+@media screen and (max-width: 640px) { 
+    .actions i {font-size:30px;margin-left:140px;}
+    
+}

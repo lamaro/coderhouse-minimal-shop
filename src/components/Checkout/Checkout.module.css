@@ -9,3 +9,9 @@
 .actions button:first-child{margin-left: 0;}
 .actions span{font-size: 15px;}
 .actions span i{font-size: 20px;padding-right: 5px;}
+
+
+@media screen and (max-width: 768px) { 
+    .resume_wrapper ul{padding: 0 30px; font-size:13px;}
+    
+}

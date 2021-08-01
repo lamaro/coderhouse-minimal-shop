@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './ItemListContainer.module.css'
 import ItemList from '../ItemList/ItemList';
 import Loading from '../Loading/Loading';
-import NoProductsFound from '../NoProductsFound/NoProductsFound'
+import Waldo from '../Waldo/Waldo'
 import { useParams } from 'react-router';
 import { getFirestore } from '../../utils/firebase'
 
@@ -61,7 +61,7 @@ const ItemListContainer = () => {
                             <h1>{catInfo.name}</h1>
                             <p>{catInfo.description}</p>
                         </div>
-                        {products.length > 0 ? <ItemList items={products} /> : <NoProductsFound />}
+                        {products.length > 0 ? <ItemList items={products} /> : <Waldo message={`No products in this category`} />}
                     </>
                 }
             </div>

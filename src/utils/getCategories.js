@@ -12,20 +12,4 @@ const getCategories = () => {
         )
 }
 
-
-const getCategoryById = id => {
-
-    const db = getFirestore();
-    const categoriesCollection = db.collection(`categories`);
-    const category = categoriesCollection.doc(id)
-    return category.get()
-        .then(doc => {
-            if (!doc.exists) {
-                return { name: "Welcome to the machine", description: "Minimal selection of gadgets and NFTs" }
-            }
-            return { id: doc.id, ...doc.data() }
-        }
-        )
-}
-
-export { getCategories, getCategoryById };
+export { getCategories };

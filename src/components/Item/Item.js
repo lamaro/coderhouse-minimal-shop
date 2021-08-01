@@ -9,10 +9,10 @@ const Item = ({ colNum, item }) => {
     return (
         <div className={`col_${colNum}`}>
             <div className={styles.product_card}>
-                <div style={{ fontSize: 150, minHeight:200, minWidth:300}}><img src={pictureUrl} alt={title} /></div>
-                <h2 style={{ fontSize: 40, lineHeight: 1.2 }}>{title}</h2>
-                <p style={{ fontSize: 20, lineHeight: 2 }}>{description}</p>
-                <p style={{ fontSize: 20, lineHeight: 2 }}>Ξ{price}</p>
+                <figure className={styles.thumbnail}><img src={pictureUrl} alt={title} /></figure>
+                <h2 className={styles.title}>{title}</h2>
+                <p className={styles.description}>{description}</p>
+                <p className={styles.price}>Ξ{price}</p>
                 <Link to={`/item/${id}`}>
                     <Button>View more</Button>
                 </Link>
