@@ -8,11 +8,13 @@ import Footer from '../Footer/Footer';
 import CartContainer from '../CartContainer/CartContainer';
 import CheckoutContainer from '../CheckoutContainer/CheckoutContainer';
 import Waldo from '../Waldo/Waldo';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const App = () => {
 
     return (
         <BrowserRouter>
+        <ScrollToTop />
             <CartProvider>
                 <NavBar />
                 <Switch>

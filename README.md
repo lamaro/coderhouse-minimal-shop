@@ -108,6 +108,8 @@ Componente reutilizable para encabezados de páginas y categorías. Recibe un t�
 ### Waldo
 Componente reutilizable para productos, categorias y páginas no encontradas. Recibe un mensaje y la opción de link a la home
 
+### ScrollToTop
+Componente para que el react router haga scroll top con cada cambio de url. Sugerido por https://reactrouter.com/web/guides/scroll-restoration
 
 ## Contexts
 
