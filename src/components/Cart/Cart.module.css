@@ -39,7 +39,7 @@
 
 @media screen and (max-width: 768px) { 
     .actions i {font-size:30px;margin-left:100px;}
-    .cart_product_row{display: none;}
+    .cart_product_row:first-child{display: none;}
     
 }
 
