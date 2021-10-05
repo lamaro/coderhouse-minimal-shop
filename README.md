@@ -1,7 +1,18 @@
 # Minimal Gadgets and NFTs store
 
-Proyecto final para el curso de ReactJS de Coderhouse (Jun-Aug 2021)
-Basado en los requerimientos incrementales de los entregables semanales.
+## Work To do
+Integración de OnboardJS y Web3 para NFTs Minting and secondary market
+
+- Onboardjs integration.
+- Select wallet button in navbar
+- Mint functions
+- Secondary market collections
+- Lot more
+
+## Etapas del proyecto
+- Etapa 1: Presentación proyecto final Coderhouse (Aug 2021 - FINALIZADO)
+- Etapa 2: NFT Store: Web3 integration (Oct 2021 - )
+
 
 
 ## Concepto comercial
@@ -16,11 +27,6 @@ En una segunda etapa, luego de finalizado el curso, se pretende expandir las pos
 
 ## Deployed on Vercel
 https://minimal-shop.vercel.app/
-
-
-## Etapas del proyecto
-- Etapa 1: Presentación proyecto final Coderhouse (Aug 2021 - FINALIZADO)
-- Etapa 2: Continuidad con nuevas features (EN DESARROLLO)
 
 
 ## Future improvments (Course out of scope)
